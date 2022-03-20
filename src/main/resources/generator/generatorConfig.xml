@@ -1,0 +1,60 @@
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!--引入数据库配置文件-->
+    <properties resource="generator.properties"/>
+
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--配置通用Mapper的MBG插件信息-->
+        <plugin type="${mapper.plugin}">
+            <property name="mappers" value="${mapper.Mapper}"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="lombok" value="Getter,Setter,ToString,Accessors"/>
+        </plugin>
+
+        <!--配置数据库连接信息-->
+        <jdbcConnection driverClass="${jdbc.driver}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.user}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+        <!--配置java实体类存放位置-->
+        <javaModelGenerator targetPackage="${targetModelPackage}"
+                            targetProject="${targetJavaProject}"/>
+
+        <!--配置XML配置文件(XxxMapper.xml)存放目录位置-->
+        <sqlMapGenerator targetPackage="${targetXMLPackage}"
+                         targetProject="${targetResourcesProject}"/>
+
+        <!--配置XxxMapper接口存放目录位置-->
+        <javaClientGenerator targetPackage="${targetMapperPackage}"
+                             targetProject="${targetJavaProject}"
+                             type="XMLMAPPER"/>
+
+        <!--根据数据库表生成Java文件的相关规则-->
+        <!--
+        tableName数据库中参与生成的表
+        tableName="%" "%"表示所有表都参与生成
+        此时使用默认规则:
+            t_emp -> TEMP
+
+        单独指定表时,可以指定命名规则
+        使用tableName domainObjectName属性指定表和要生成的实体类名称
+        -->
+        <table tableName="t_country" domainObjectName="Country">
+            <!--<generatedKey column="id"
+                          sqlStatement="select SEQ_{1}.nextval from dual"
+                          identity="false" type="pre"/>-->
+            <!--配置主键生成策略-->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
