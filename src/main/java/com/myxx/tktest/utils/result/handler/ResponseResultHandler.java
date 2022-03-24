@@ -32,13 +32,11 @@ public class ResponseResultHandler implements ResponseBodyAdvice<Object> {
      */
     @Override
     public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
-//        HttpServletRequest request = HttpContextUtil.getRequest();
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = servletRequestAttributes.getRequest();
         //判断请求是否有包装标志
         ResponseResult responseResultAnn = (ResponseResult) request.getAttribute(RESPONSE_RESULT_ANN);
         return responseResultAnn == null ? false : true;
-//        return true;
     }
 
     /**
