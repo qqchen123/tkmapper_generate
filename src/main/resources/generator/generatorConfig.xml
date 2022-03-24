@@ -8,7 +8,7 @@
     <properties resource="generator.properties"/>
 
 
-    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <context id="Oracle" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
 
@@ -19,10 +19,17 @@
             <property name="lombok" value="Getter,Setter,ToString,Accessors"/>
         </plugin>
 
-        <!--配置数据库连接信息-->
-        <jdbcConnection driverClass="${jdbc.driver}"
+        <!--配置MYSQL数据库连接信息-->
+        <!--<jdbcConnection driverClass="${jdbc.driver}"
                         connectionURL="${jdbc.url}"
                         userId="${jdbc.user}"
+                        password="${jdbc.password}">
+        </jdbcConnection>-->
+
+        <!--配置oracle数据库连接信息-->
+        <jdbcConnection driverClass="${jdbc.driverClassName}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.username}"
                         password="${jdbc.password}">
         </jdbcConnection>
 
@@ -49,12 +56,13 @@
         单独指定表时,可以指定命名规则
         使用tableName domainObjectName属性指定表和要生成的实体类名称
         -->
-        <table tableName="t_country" domainObjectName="Country">
-            <!--<generatedKey column="id"
+        <table tableName="TDMS_PROCEDURE_CATE" domainObjectName="ProcedureCate">
+            <!--配置 ORACLE 主键生成策略-->
+            <generatedKey column="CATE_ID"
                           sqlStatement="select SEQ_{1}.nextval from dual"
-                          identity="false" type="pre"/>-->
-            <!--配置主键生成策略-->
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+                          identity="false" type="pre"/>
+            <!--配置MYSQL主键生成策略-->
+<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>
     </context>
 </generatorConfiguration>

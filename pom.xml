@@ -51,6 +51,11 @@
             <version>${mysql.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
+        <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>4.2.1</version>
@@ -92,10 +97,15 @@
 
                 <!--MBG插件的依赖信息-->
                 <dependencies>
-                    <dependency>
+                    <!--<dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
                         <version>${mysql.version}</version>
+                    </dependency>-->
+                    <dependency>
+                        <groupId>com.oracle</groupId>
+                        <artifactId>ojdbc6</artifactId>
+                        <version>11.2.0.3</version>
                     </dependency>
                     <dependency>
                         <groupId>tk.mybatis</groupId>
