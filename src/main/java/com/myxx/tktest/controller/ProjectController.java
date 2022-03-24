@@ -1,5 +1,7 @@
 package com.myxx.tktest.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.myxx.tktest.pojo.ProjectInfo;
 import com.myxx.tktest.service.ProjectInfoService;
 import com.myxx.tktest.utils.result.Result;
@@ -25,8 +27,11 @@ public class ProjectController {
     }
 
     @GetMapping("/getProjectList")
-    public List<ProjectInfo> getProjectList() {
-        return projectInfoService.getProjectList();
+    public Result getProjectList() {
+        PageHelper.startPage(1, 3);
+        List<ProjectInfo> projectList = projectInfoService.getProjectList();
+        PageInfo<ProjectInfo> projectInfoPageInfo = new PageInfo<>(projectList);
+        return ResultResponse.success(projectInfoPageInfo);
     }
 
 

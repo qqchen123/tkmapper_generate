@@ -20,3 +20,8 @@ spring:
 
 logging:
   config: classpath:log/logback.xml
+pagehelper:
+  helper-dialect: oracle
+  reasonable: true
+  offset-as-page-num: true
+  row-bounds-with-count: true

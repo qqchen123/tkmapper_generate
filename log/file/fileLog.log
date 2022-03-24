@@ -2155,3 +2155,125 @@ java.sql.SQLException: 无效的列类型: 1111
 2022-03-24 20:19:39,146 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
 2022-03-24 20:19:39,147 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
 2022-03-24 20:19:39,157 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2022-03-24 20:40:19,601 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-MDQGRCS with PID 13092 (D:\javaWorkSpace\tktest\target\classes started by chen in D:\javaWorkSpace\tktest)
+2022-03-24 20:40:19,605 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-03-24 20:40:20,150 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'materialInfoMapper' and 'com.myxx.tktest.mapper.MaterialInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 20:40:20,150 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureCateMapper' and 'com.myxx.tktest.mapper.ProcedureCateMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 20:40:20,150 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureInfoMapper' and 'com.myxx.tktest.mapper.ProcedureInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 20:40:20,150 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'projectInfoMapper' and 'com.myxx.tktest.mapper.ProjectInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 20:40:20,150 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest.mapper]' package. Please check your configuration.
+2022-03-24 20:40:20,150 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-03-24 20:40:20,437 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-03-24 20:40:20,444 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-24 20:40:20,445 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-03-24 20:40:20,445 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-03-24 20:40:20,502 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-03-24 20:40:20,502 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 823 ms
+2022-03-24 20:40:21,024 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-24 20:40:21,138 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-03-24 20:40:21,139 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-03-24 20:40:21,139 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-03-24 20:40:21,139 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-03-24 20:40:21,156 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-03-24 20:40:21,173 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 20:40:21,176 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 1.979 seconds (JVM running for 2.783)
+2022-03-24 20:40:37,508 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 20:40:37,509 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-03-24 20:40:37,513 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-03-24 20:41:00,698 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-03-24 20:41:00,699 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-03-24 20:41:00,765 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-03-24 20:41:00,769 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-03-24 20:48:32,013 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-24 20:48:32,013 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2022-03-24 20:48:32,021 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2022-03-24 21:15:20,861 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-MDQGRCS with PID 19748 (D:\javaWorkSpace\tktest\target\classes started by chen in D:\javaWorkSpace\tktest)
+2022-03-24 21:15:20,864 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-03-24 21:15:21,397 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'materialInfoMapper' and 'com.myxx.tktest.mapper.MaterialInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:15:21,397 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureCateMapper' and 'com.myxx.tktest.mapper.ProcedureCateMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:15:21,398 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureInfoMapper' and 'com.myxx.tktest.mapper.ProcedureInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:15:21,398 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'projectInfoMapper' and 'com.myxx.tktest.mapper.ProjectInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:15:21,398 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest.mapper]' package. Please check your configuration.
+2022-03-24 21:15:21,404 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-03-24 21:15:21,405 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-03-24 21:15:21,686 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-03-24 21:15:21,693 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-24 21:15:21,693 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-03-24 21:15:21,694 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-03-24 21:15:21,752 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-03-24 21:15:21,752 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 850 ms
+2022-03-24 21:15:22,219 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-24 21:15:22,297 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-03-24 21:15:22,298 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-03-24 21:15:22,298 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-03-24 21:15:22,298 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-03-24 21:15:22,379 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-03-24 21:15:22,396 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 21:15:22,399 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.131 seconds (JVM running for 2.807)
+2022-03-24 21:16:18,679 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 21:16:18,679 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-03-24 21:16:18,683 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-03-24 21:16:18,724 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-03-24 21:16:18,726 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-03-24 21:16:18,794 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-03-24 21:16:18,797 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-03-24 21:21:17,751 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-24 21:21:17,751 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2022-03-24 21:21:17,760 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2022-03-24 21:21:21,886 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-MDQGRCS with PID 1148 (D:\javaWorkSpace\tktest\target\classes started by chen in D:\javaWorkSpace\tktest)
+2022-03-24 21:21:21,889 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-03-24 21:21:22,391 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'materialInfoMapper' and 'com.myxx.tktest.mapper.MaterialInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:21:22,391 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureCateMapper' and 'com.myxx.tktest.mapper.ProcedureCateMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:21:22,391 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureInfoMapper' and 'com.myxx.tktest.mapper.ProcedureInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:21:22,391 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'projectInfoMapper' and 'com.myxx.tktest.mapper.ProjectInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:21:22,391 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest.mapper]' package. Please check your configuration.
+2022-03-24 21:21:22,398 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-03-24 21:21:22,398 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-03-24 21:21:22,681 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-03-24 21:21:22,688 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-24 21:21:22,689 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-03-24 21:21:22,689 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-03-24 21:21:22,748 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-03-24 21:21:22,749 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 793 ms
+2022-03-24 21:21:23,199 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-24 21:21:23,276 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-03-24 21:21:23,277 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-03-24 21:21:23,277 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-03-24 21:21:23,277 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-03-24 21:21:23,355 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-03-24 21:21:23,372 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 21:21:23,374 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 1.894 seconds (JVM running for 2.567)
+2022-03-24 21:23:10,538 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-24 21:23:14,659 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-MDQGRCS with PID 13928 (D:\javaWorkSpace\tktest\target\classes started by chen in D:\javaWorkSpace\tktest)
+2022-03-24 21:23:14,662 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-03-24 21:23:15,172 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'materialInfoMapper' and 'com.myxx.tktest.mapper.MaterialInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:23:15,172 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureCateMapper' and 'com.myxx.tktest.mapper.ProcedureCateMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:23:15,172 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'procedureInfoMapper' and 'com.myxx.tktest.mapper.ProcedureInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:23:15,172 WARN (ClassPathMapperScanner.java:229)- Skipping MapperFactoryBean with name 'projectInfoMapper' and 'com.myxx.tktest.mapper.ProjectInfoMapper' mapperInterface. Bean already defined with the same name!
+2022-03-24 21:23:15,172 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest.mapper]' package. Please check your configuration.
+2022-03-24 21:23:15,179 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-03-24 21:23:15,179 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-03-24 21:23:15,463 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-03-24 21:23:15,469 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-24 21:23:15,470 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-03-24 21:23:15,470 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-03-24 21:23:15,541 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-03-24 21:23:15,542 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 810 ms
+2022-03-24 21:23:16,039 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-24 21:23:16,120 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-03-24 21:23:16,120 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-03-24 21:23:16,121 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-03-24 21:23:16,121 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-03-24 21:23:16,198 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-03-24 21:23:16,215 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 21:23:16,218 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 1.958 seconds (JVM running for 2.601)
+2022-03-24 21:23:27,437 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 21:23:27,437 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-03-24 21:23:27,441 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-03-24 21:23:27,510 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-03-24 21:23:27,512 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-03-24 21:23:27,578 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-03-24 21:23:27,581 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-03-24 21:23:51,233 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-03-24 21:23:51,234 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2022-03-24 21:23:51,243 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
