@@ -56,9 +56,9 @@
         单独指定表时,可以指定命名规则
         使用tableName domainObjectName属性指定表和要生成的实体类名称
         -->
-        <table tableName="TDMS_PROCEDURE_CATE" domainObjectName="ProcedureCate">
+        <table tableName="TDMS_PROJECT_INFO" domainObjectName="ProjectInfo">
             <!--配置 ORACLE 主键生成策略-->
-            <generatedKey column="CATE_ID"
+            <generatedKey column="PRO_ID"
                           sqlStatement="select SEQ_{1}.nextval from dual"
                           identity="false" type="pre"/>
             <!--配置MYSQL主键生成策略-->
