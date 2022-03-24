@@ -16,7 +16,7 @@ public class ProjectInfo {
     @Id
     @Column(name = "PRO_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select SEQ_TDMS_PROJECT_INFO.nextval from dual")
-    private Long proId;
+    private Integer proId;
 
     @Column(name = "PROJECT_NAME")
     private String projectName;

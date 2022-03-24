@@ -10,5 +10,4 @@ public class TktestApplication {
     public static void main(String[] args) {
         SpringApplication.run(TktestApplication.class, args);
     }
-
 }
