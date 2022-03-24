@@ -2,6 +2,8 @@ package com.myxx.tktest.controller;
 
 import com.myxx.tktest.pojo.ProjectInfo;
 import com.myxx.tktest.service.ProjectInfoService;
+import com.myxx.tktest.utils.result.Result;
+import com.myxx.tktest.utils.result.ResultResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +18,10 @@ public class ProjectController {
     @Autowired
     private ProjectInfoService projectInfoService;
 
-    @GetMapping("/getProjectInfo")
-    public ProjectInfo getProjectInfo(Integer id) {
+    @GetMapping("/getProjectInfo/{id}")
+    public Result getProjectInfo(@PathVariable("id") Integer id) {
         ProjectInfo projectInfoById = projectInfoService.getProjectInfoById(id);
-        return projectInfoById;
+        return ResultResponse.success(projectInfoById);
     }
 
     @GetMapping("/getProjectList")

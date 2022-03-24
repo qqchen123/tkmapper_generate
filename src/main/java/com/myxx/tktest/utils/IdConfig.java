@@ -7,7 +7,7 @@ import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 import java.util.Properties;
 
 /**
- *
+ *通用mapper配置Oracle主键的代码方式
  */
 @Configuration
 public class IdConfig {
