@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <result column="PROCEDURE_ID" jdbcType="DECIMAL" property="procedureId" />
+    <id column="PROCEDURE_ID" jdbcType="DECIMAL" property="procedureId" />
     <result column="ITEM" jdbcType="VARCHAR" property="item" />
     <result column="RESULT" jdbcType="VARCHAR" property="result" />
     <result column="REPORT" jdbcType="VARCHAR" property="report" />

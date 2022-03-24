@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <result column="MATERIAL_ID" jdbcType="DECIMAL" property="materialId" />
+    <id column="MATERIAL_ID" jdbcType="DECIMAL" property="materialId" />
     <result column="CATEGORY" jdbcType="VARCHAR" property="category" />
     <result column="MATERIAL" jdbcType="VARCHAR" property="material" />
     <result column="PROJECT_ID" jdbcType="DECIMAL" property="projectId" />

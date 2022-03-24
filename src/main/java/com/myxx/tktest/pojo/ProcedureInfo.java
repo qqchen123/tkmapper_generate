@@ -13,6 +13,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Table(name = "TDMS_PROCEDURE_INFO")
 public class ProcedureInfo {
+    @Id
     @Column(name = "PROCEDURE_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select SEQ_TDMS_PROCEDURE_INFO.nextval from dual")
     private Short procedureId;

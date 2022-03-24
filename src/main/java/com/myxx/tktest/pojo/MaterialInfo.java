@@ -13,6 +13,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Table(name = "TDMS_MATERIAL_INFO")
 public class MaterialInfo {
+    @Id
     @Column(name = "MATERIAL_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select SEQ_TDMS_MATERIAL_INFO.nextval from dual")
     private Short materialId;

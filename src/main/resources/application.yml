@@ -11,14 +11,15 @@ mapper:
 #    password: root
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 
-# 配置Oracle数据库
-spring:
-　　datasource:
-　　　　driver-class-name: oracle.jdbc.driver.OracleDriver
-　　　　jdbc-url: jdbc:oracle:thin:@192.168.90.10:1521:orcl
-　　　　username: wateruser
-　　　　password: itcast
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.xxxx.mappertest
+
+#配置Oracle数据库
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.90.10:1521:orcl
+    username: wateruser
+    password: itcast
+    driver-class-name: oracle.jdbc.driver.OracleDriver

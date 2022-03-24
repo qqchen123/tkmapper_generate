@@ -5,7 +5,7 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <result column="PRO_ID" jdbcType="DECIMAL" property="proId" />
+    <id column="PRO_ID" jdbcType="DECIMAL" property="proId" />
     <result column="PROJECT_NAME" jdbcType="VARCHAR" property="projectName" />
     <result column="PMO" jdbcType="VARCHAR" property="pmo" />
     <result column="SPONSOR" jdbcType="VARCHAR" property="sponsor" />
