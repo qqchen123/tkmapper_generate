@@ -1,8 +1,8 @@
-mapper:
-  mappers:
-    - tk.mybatis.mapper.common.Mapper
-  notEmpty: true
-  ORDER: BEFORE
+#mapper:
+#  mappers:
+#    - tk.mybatis.mapper.common.Mapper
+#  notEmpty: true
+#  ORDER: BEFORE
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
