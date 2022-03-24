@@ -21,17 +21,19 @@ public class ProjectController {
     private ProjectInfoService projectInfoService;
 
     @GetMapping("/getProjectInfo/{id}")
-    public Result getProjectInfo(@PathVariable("id") Integer id) {
+    public ProjectInfo getProjectInfo(@PathVariable("id") Integer id) {
         ProjectInfo projectInfoById = projectInfoService.getProjectInfoById(id);
-        return ResultResponse.success(projectInfoById);
+//        return ResultResponse.success(projectInfoById);
+        return projectInfoById;
     }
 
     @GetMapping("/getProjectList")
-    public Result getProjectList() {
-        PageHelper.startPage(1, 3);
-        List<ProjectInfo> projectList = projectInfoService.getProjectList();
-        PageInfo<ProjectInfo> projectInfoPageInfo = new PageInfo<>(projectList);
-        return ResultResponse.success(projectInfoPageInfo);
+    public Result getProjectList(
+            @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum,
+            @RequestParam(defaultValue = "10", value = "pageSize") Integer pageSize
+    ) {
+        PageInfo<ProjectInfo> projectList = projectInfoService.getProjectList(pageNum, pageSize);
+        return ResultResponse.success(projectList);
     }
 
 

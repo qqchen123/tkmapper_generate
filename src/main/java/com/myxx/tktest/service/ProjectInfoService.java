@@ -1,5 +1,7 @@
 package com.myxx.tktest.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.myxx.tktest.mapper.ProjectInfoMapper;
 import com.myxx.tktest.pojo.ProjectInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,7 @@ public class ProjectInfoService {
 
     /**
      * 插入项目基本信息
+     *
      * @param projectInfo
      * @return
      */
@@ -36,10 +39,12 @@ public class ProjectInfoService {
         return i;
     }
 
-    public List<ProjectInfo> getProjectList(){
-        return projectInfoMapper.selectAll();
+    public PageInfo<ProjectInfo> getProjectList(Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<ProjectInfo> projectInfos = projectInfoMapper.selectAll();
+        PageInfo<ProjectInfo> projectInfoPageInfo = new PageInfo<>(projectInfos);
+        return projectInfoPageInfo;
     }
-
 
 
 }
