@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myxx.tktest.mapper.ProcedureInfoMapper">
+  <resultMap id="BaseResultMap" type="com.myxx.tktest.pojo.ProcedureInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="PROCEDURE_ID" jdbcType="DECIMAL" property="procedureId" />
+    <result column="ITEM" jdbcType="VARCHAR" property="item" />
+    <result column="RESULT" jdbcType="VARCHAR" property="result" />
+    <result column="REPORT" jdbcType="VARCHAR" property="report" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="PROJECT_ID" jdbcType="DECIMAL" property="projectId" />
+    <result column="CATE_ID" jdbcType="DECIMAL" property="cateId" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="IS_DELETE" jdbcType="VARCHAR" property="isDelete" />
+  </resultMap>
+</mapper>
