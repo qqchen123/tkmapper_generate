@@ -39,11 +39,16 @@ public class ProjectInfoService {
         return i;
     }
 
+    /**
+     * 分页获取项目列表数据
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
     public PageInfo<ProjectInfo> getProjectList(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<ProjectInfo> projectInfos = projectInfoMapper.selectAll();
-        PageInfo<ProjectInfo> projectInfoPageInfo = new PageInfo<>(projectInfos);
-        return projectInfoPageInfo;
+        return new PageInfo<>(projectInfos);
     }
 
 

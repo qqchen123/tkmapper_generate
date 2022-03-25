@@ -20,13 +20,25 @@ public class ProjectController {
     @Autowired
     private ProjectInfoService projectInfoService;
 
+    /**
+     * 根据id获取项目数据
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/getProjectInfo/{id}")
-    public ProjectInfo getProjectInfo(@PathVariable("id") Integer id) {
+    public Result getProjectInfo(@PathVariable("id") Integer id) {
         ProjectInfo projectInfoById = projectInfoService.getProjectInfoById(id);
-//        return ResultResponse.success(projectInfoById);
-        return projectInfoById;
+        return ResultResponse.success(projectInfoById);
     }
 
+    /**
+     * 分页获取项目列表数据
+     *
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
     @GetMapping("/getProjectList")
     public Result getProjectList(
             @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum,
@@ -37,9 +49,15 @@ public class ProjectController {
     }
 
 
+    /**
+     * 添加项目数据
+     *
+     * @param projectInfo
+     */
     @PostMapping("/insertPro")
-    public void insertProject(@RequestBody ProjectInfo projectInfo) {
+    public Result insertProject(@RequestBody ProjectInfo projectInfo) {
         projectInfoService.insertProjectInfo(projectInfo);
+        return ResultResponse.success();
     }
 
 

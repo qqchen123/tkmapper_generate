@@ -3,7 +3,7 @@ package com.myxx.tktest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@tk.mybatis.spring.annotation.MapperScan(basePackages = "com.myxx.tktest.mapper")
+//@tk.mybatis.spring.annotation.MapperScan(basePackages = "com.myxx.tktest.mapper")
 @SpringBootApplication
 public class TktestApplication {
 
