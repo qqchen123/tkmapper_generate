@@ -39,7 +39,7 @@ public class ProjectController {
     @GetMapping("/getProjectList")
     public Result getProjectList(
             @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum,
-            @RequestParam(defaultValue = "10", value = "pageSize") Integer pageSize
+            @RequestParam(defaultValue = "20", value = "pageSize") Integer pageSize
     ) {
         PageInfo<ProjectInfo> projectList = projectInfoService.getProjectList(pageNum, pageSize);
         return ResultResponse.success(projectList);
@@ -54,6 +54,30 @@ public class ProjectController {
     @PostMapping("/insertPro")
     public Result insertProject(@RequestBody ProjectInfo projectInfo) {
         projectInfoService.insertProjectInfo(projectInfo);
+        return ResultResponse.success();
+    }
+
+    /**
+     * 修改数据
+     *
+     * @param projectInfo
+     * @return
+     */
+    @PostMapping("/editPro")
+    public Result editProject(@RequestBody ProjectInfo projectInfo) {
+        projectInfoService.updateProjectInfo(projectInfo);
+        return ResultResponse.success();
+    }
+
+    /**
+     * 根据id 逻辑删除
+     *
+     * @param id
+     * @return
+     */
+    @PostMapping("/delete/{id}")
+    public Result deleteProject(@PathVariable Integer id) {
+        projectInfoService.deleteProjectInfo(id, "Y");
         return ResultResponse.success();
     }
 

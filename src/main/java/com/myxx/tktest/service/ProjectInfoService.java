@@ -6,6 +6,7 @@ import com.myxx.tktest.mapper.ProjectInfoMapper;
 import com.myxx.tktest.pojo.ProjectInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
 import java.util.List;
@@ -54,6 +55,20 @@ public class ProjectInfoService {
     }
 
     /**
+     * 根据id进行 逻辑删除
+     *
+     * @param projectId
+     * @param isDelete
+     * @return
+     */
+    public Integer deleteProjectInfo(Integer projectId, String isDelete) {
+        ProjectInfo projectInfo = new ProjectInfo();
+        projectInfo.setIsDelete(isDelete);
+        projectInfo.setProId(projectId);
+        return projectInfoMapper.updateByPrimaryKeySelective(projectInfo);
+    }
+
+    /**
      * 分页获取项目列表数据
      *
      * @param pageNum
@@ -62,7 +77,10 @@ public class ProjectInfoService {
      */
     public PageInfo<ProjectInfo> getProjectList(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        List<ProjectInfo> projectInfos = projectInfoMapper.selectAll();
+        Example example = new Example(ProjectInfo.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("isDelete","N").orEqualTo("isDelete","").orIsNull("isDelete");
+        List<ProjectInfo> projectInfos = projectInfoMapper.selectByExample(example);
         return new PageInfo<>(projectInfos);
     }
 

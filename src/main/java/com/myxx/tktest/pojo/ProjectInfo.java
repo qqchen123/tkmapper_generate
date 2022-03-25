@@ -1,11 +1,13 @@
 package com.myxx.tktest.pojo;
 
-import java.util.Date;
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -63,9 +65,11 @@ public class ProjectInfo {
     @Column(name = "IS_DELETE")
     private String isDelete;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "CREATE_TIME")
     private Date createTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME")
     private Date updateTime;
 }
