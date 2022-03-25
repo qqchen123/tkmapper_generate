@@ -4,6 +4,7 @@
 #  notEmpty: true
 #  ORDER: BEFORE
 
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.xxxx.mappertest
@@ -25,3 +26,9 @@ pagehelper:
   reasonable: true
   offset-as-page-num: true
   row-bounds-with-count: true
+
+
+
+server:
+  servlet:
+    context-path: /api

@@ -1,6 +1,5 @@
 package com.myxx.tktest.utils.result;
 
-import lombok.Data;
 import lombok.Getter;
 
 @Getter
