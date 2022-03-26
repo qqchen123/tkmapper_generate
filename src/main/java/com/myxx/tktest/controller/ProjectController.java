@@ -39,9 +39,12 @@ public class ProjectController {
     @GetMapping("/getProjectList")
     public Result getProjectList(
             @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum,
-            @RequestParam(defaultValue = "20", value = "pageSize") Integer pageSize
+            @RequestParam(defaultValue = "20", value = "pageSize") Integer pageSize,
+            @RequestParam(defaultValue = "", value = "start") String start,
+            @RequestParam(defaultValue = "", value = "end") String end
+
     ) {
-        PageInfo<ProjectInfo> projectList = projectInfoService.getProjectList(pageNum, pageSize);
+        PageInfo<ProjectInfo> projectList = projectInfoService.getProjectList(pageNum, pageSize,start,end);
         return ResultResponse.success(projectList);
     }
 

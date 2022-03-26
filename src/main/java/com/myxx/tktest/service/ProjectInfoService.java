@@ -1,9 +1,11 @@
 package com.myxx.tktest.service;
 
+import cn.hutool.core.date.DateUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.myxx.tktest.mapper.ProjectInfoMapper;
 import com.myxx.tktest.pojo.ProjectInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -75,11 +77,14 @@ public class ProjectInfoService {
      * @param pageSize
      * @return
      */
-    public PageInfo<ProjectInfo> getProjectList(Integer pageNum, Integer pageSize) {
+    public PageInfo<ProjectInfo> getProjectList(Integer pageNum, Integer pageSize, String start, String end) {
         PageHelper.startPage(pageNum, pageSize);
         Example example = new Example(ProjectInfo.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("isDelete","N").orEqualTo("isDelete","").orIsNull("isDelete");
+        criteria.andCondition("(IS_DELETE='N' or IS_DELETE='' or IS_DELETE is null)");
+        if (StringUtils.isNotBlank(start) && StringUtils.isNotBlank(end)){
+            criteria.andBetween("createTime", DateUtil.parse(start,"yyyy/MM/dd HH:mm:ss"), DateUtil.parse(end,"yyyy/MM/dd HH:mm:ss"));
+        }
         List<ProjectInfo> projectInfos = projectInfoMapper.selectByExample(example);
         return new PageInfo<>(projectInfos);
     }
