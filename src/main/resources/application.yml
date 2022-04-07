@@ -27,8 +27,12 @@ pagehelper:
   offset-as-page-num: true
   row-bounds-with-count: true
 
-
-
 server:
   servlet:
     context-path: /api
+
+minio:
+  endpoint: http://192.168.58.131:9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+#  bucketName: myvideo
