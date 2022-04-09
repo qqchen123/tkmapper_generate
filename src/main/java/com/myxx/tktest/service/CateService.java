@@ -6,6 +6,7 @@ import com.myxx.tktest.mapper.ProcedureCateMapper;
 import com.myxx.tktest.pojo.ProcedureCate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
 import java.util.List;
@@ -38,6 +39,14 @@ public class CateService {
         List<ProcedureCate> procedureCates = procedureCateMapper.selectAll();
         return new PageInfo<>(procedureCates);
     }
+
+    public List<ProcedureCate> getCatesList(Integer parentId){
+        Example example = new Example(ProcedureCate.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("parentId",parentId);
+        return procedureCateMapper.selectByExample(example);
+    }
+
 
     /**
      * 添加分类数据

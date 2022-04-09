@@ -8,6 +8,8 @@ import com.myxx.tktest.utils.result.ResultResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequestMapping("/cate")
 @RestController
 public class CateController {
@@ -31,6 +33,18 @@ public class CateController {
         PageInfo<ProcedureCate> cateList = cateService.getCateList(pageNum, pageSize);
         return ResultResponse.success(cateList);
     }
+
+    /**
+     *
+     * @param pid
+     * @return
+     */
+    @GetMapping("/getCatesbyPid/{pid}")
+    public Result getCatesbyPid(@PathVariable("pid") Integer pid){
+        List<ProcedureCate> catesList = cateService.getCatesList(pid);
+        return ResultResponse.success(catesList);
+    }
+
 
     /**
      * 根据id获取分类信息

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 
@@ -52,8 +53,14 @@ public class MinioController {
             log.error("文件上传异常");
             return ResultResponse.failure(ResultCode.FAIL,"文件上传异常");
         }
+        log.info("文件上传成功");
         return ResultResponse.success("文件上传成功");
     }
 
+    @GetMapping("/download")
+    public Result download(@RequestParam(value = "bucketName") String bucketName, @RequestParam(value = "file") String file, HttpServletResponse response){
+        minioUtils.download(bucketName,file,response);
+        return ResultResponse.success();
+    }
 
 }
