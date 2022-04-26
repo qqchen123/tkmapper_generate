@@ -41,8 +41,11 @@ public class ProjectInfoService {
     public Integer insertProjectInfo(ProjectInfo projectInfo) {
         projectInfo.setUpdateTime(new Date());
         projectInfo.setCreateTime(new Date());
-        int i = projectInfoMapper.insertSelective(projectInfo);
-        return i;
+        projectInfo.setM0Status("1");
+        projectInfo.setT0Status("1");
+        projectInfo.setT1Status("1");
+        projectInfo.setT2Status("1");
+        return projectInfoMapper.insertSelective(projectInfo);
     }
 
     /**

@@ -1,11 +1,12 @@
 package com.myxx.tktest.pojo;
 
-import java.util.Date;
-import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -16,7 +17,7 @@ public class ProcedureCate {
     @Id
     @Column(name = "CATE_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select SEQ_TDMS_PROCEDURE_CATE.nextval from dual")
-    private Long cateId;
+    private Integer cateId;
 
     @Column(name = "CATE_NAME")
     private String cateName;
@@ -32,4 +33,7 @@ public class ProcedureCate {
 
     @Column(name = "UPDATE_TIME")
     private Date updateTime;
+
+    @Column(name = "TABLE_INFO")
+    private String tableInfo;
 }

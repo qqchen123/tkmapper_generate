@@ -6,6 +6,7 @@ import com.myxx.tktest.mapper.FileInfoMapper;
 import com.myxx.tktest.pojo.FileInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
 import java.util.List;
@@ -33,9 +34,15 @@ public class FileInfoService {
      * @param pageSize
      * @return
      */
-    public PageInfo<FileInfo> getFileInfoList(Integer pageNum, Integer pageSize) {
+    public PageInfo<FileInfo> getFileInfoList(Integer pageNum, Integer pageSize,Integer cateId,Integer projectId) {
         PageHelper.startPage(pageNum, pageSize);
-        List<FileInfo> fileInfoList = fileInfoMapper.selectAll();
+        Example example = new Example(FileInfo.class);
+        Example.Criteria criteria = example.createCriteria();
+        if (cateId != null && projectId != null){
+            criteria.andEqualTo("cateId", cateId);
+            criteria.andEqualTo("projectId", projectId);
+        }
+        List<FileInfo> fileInfoList = fileInfoMapper.selectByExample(example);
         return new PageInfo<>(fileInfoList);
     }
 

@@ -72,4 +72,10 @@ public class ProjectInfo {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME")
     private Date updateTime;
+
+    @Column(name = "T0_TIME")
+    private Date t0Time;
+
+    @Column(name = "T1_STATUS")
+    private String t1Status;
 }

@@ -11,5 +11,9 @@
     <result column="IS_DELETE" jdbcType="VARCHAR" property="isDelete" />
     <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
     <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="TABLE_INFO" jdbcType="VARCHAR" property="tableInfo" />
   </resultMap>
+
+
+
 </mapper>

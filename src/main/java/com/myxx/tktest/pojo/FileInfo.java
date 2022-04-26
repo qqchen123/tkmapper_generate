@@ -1,14 +1,12 @@
 package com.myxx.tktest.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
@@ -17,9 +15,10 @@ import java.util.Date;
 @Accessors(chain = true)
 @Table(name = "TDMS_FILE_INFO")
 public class FileInfo {
+    @Id
     @Column(name = "FILE_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "select SEQ_TDMS_FILE_INFO.nextval from dual")
-    private Long fileId;
+    private Integer fileId;
 
     @Column(name = "FILE_NAME")
     private String fileName;
@@ -33,9 +32,11 @@ public class FileInfo {
     @Column(name = "CATE_ID")
     private Long cateId;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME")
     private Date updateTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "CREATE_TIME")
     private Date createTime;
 

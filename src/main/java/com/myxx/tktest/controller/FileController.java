@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/cates")
+@RequestMapping("/file")
 public class FileController {
 
     @Autowired
@@ -28,10 +28,12 @@ public class FileController {
             @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum,
             @RequestParam(defaultValue = "20", value = "pageSize") Integer pageSize,
             @RequestParam(defaultValue = "", value = "start") String start,
-            @RequestParam(defaultValue = "", value = "end") String end
+            @RequestParam(defaultValue = "", value = "end") String end,
+            @RequestParam(defaultValue = "", value = "cateId") Integer cateId,
+            @RequestParam(defaultValue = "", value = "projectId") Integer projectId
 
     ) {
-        PageInfo<FileInfo> fileInfoList = fileInfoService.getFileInfoList(pageNum, pageSize);
+        PageInfo<FileInfo> fileInfoList = fileInfoService.getFileInfoList(pageNum, pageSize,cateId,projectId);
         return ResultResponse.success(fileInfoList);
     }
 

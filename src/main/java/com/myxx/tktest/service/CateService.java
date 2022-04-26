@@ -2,6 +2,7 @@ package com.myxx.tktest.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.myxx.tktest.dto.ProcedureCateDto;
 import com.myxx.tktest.mapper.ProcedureCateMapper;
 import com.myxx.tktest.pojo.ProcedureCate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,16 +35,22 @@ public class CateService {
      * @param pageSize
      * @return
      */
-    public PageInfo<ProcedureCate> getCateList(Integer pageNum, Integer pageSize) {
+    public PageInfo<ProcedureCateDto> getCateList(
+            Integer pageNum,
+            Integer pageSize,
+            String cateName,
+            String tableInfo,
+            String parentCate
+    ) {
         PageHelper.startPage(pageNum, pageSize);
-        List<ProcedureCate> procedureCates = procedureCateMapper.selectAll();
-        return new PageInfo<>(procedureCates);
+        List<ProcedureCateDto> cate = procedureCateMapper.getCate(cateName,tableInfo,parentCate);
+        return new PageInfo<>(cate);
     }
 
-    public List<ProcedureCate> getCatesList(Integer parentId){
+    public List<ProcedureCate> getCatesList(Integer parentId) {
         Example example = new Example(ProcedureCate.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("parentId",parentId);
+        criteria.andEqualTo("parentId", parentId);
         return procedureCateMapper.selectByExample(example);
     }
 
@@ -69,6 +76,16 @@ public class CateService {
     public Integer updateCate(ProcedureCate procedureCate) {
         procedureCate.setUpdateTime(new Date());
         return procedureCateMapper.updateByPrimaryKeySelective(procedureCate);
+    }
+
+
+    /**
+     * 根据id删除分类
+     * @param cateId
+     * @return
+     */
+    public Integer deleteCate(Integer cateId){
+        return procedureCateMapper.deleteByPrimaryKey(cateId);
     }
 
 }

@@ -19,8 +19,8 @@ public class MaterialController {
     public Result getPageMaterialList(
             @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum,
             @RequestParam(defaultValue = "10", value = "pageSize") Integer pageSize,
-            @RequestParam(defaultValue = "10", value = "cateId") Integer cateId,
-            @RequestParam(defaultValue = "10", value = "projectId") Integer projectId
+            @RequestParam(defaultValue = "0", value = "cateId") Integer cateId,
+            @RequestParam(defaultValue = "0", value = "projectId") Integer projectId
 
     ) {
         PageInfo<MaterialInfo> materialInfoList = materialInfoService.getMaterialInfoByPage(pageNum, pageSize, cateId, projectId);
