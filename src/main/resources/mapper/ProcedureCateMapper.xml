@@ -9,9 +9,10 @@
     <result column="CATE_NAME" jdbcType="VARCHAR" property="cateName" />
     <result column="PARENT_ID" jdbcType="DECIMAL" property="parentId" />
     <result column="IS_DELETE" jdbcType="VARCHAR" property="isDelete" />
-    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
     <result column="TABLE_INFO" jdbcType="VARCHAR" property="tableInfo" />
+    <result column="TABLE_COLUMN" jdbcType="VARCHAR" property="tableColumn" />
   </resultMap>
 
 

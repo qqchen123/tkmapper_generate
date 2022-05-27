@@ -1,5 +1,7 @@
 package com.myxx.tktest.pojo;
 
+import java.util.Date;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -36,4 +38,7 @@ public class ProcedureCate {
 
     @Column(name = "TABLE_INFO")
     private String tableInfo;
+
+    @Column(name = "TABLE_COLUMN")
+    private String tableColumn;
 }

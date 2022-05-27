@@ -588,3 +588,39 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
 	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
 	... 99 common frames omitted
+2022-05-25 20:33:42,147 ERROR (LoggingFailureAnalysisReporter.java:40)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field predefinedDataService in com.myxx.tktest.controller.PreDefinedDataController required a bean of type 'com.myxx.tktest.service.PredefinedDataService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.myxx.tktest.service.PredefinedDataService' in your configuration.
+
+2022-05-25 20:34:03,602 ERROR (LoggingFailureAnalysisReporter.java:40)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field predefinedDataService in com.myxx.tktest.controller.PreDefinedDataController required a bean of type 'com.myxx.tktest.service.PredefinedDataService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.myxx.tktest.service.PredefinedDataService' in your configuration.
+

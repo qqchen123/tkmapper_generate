@@ -1,750 +1,84 @@
-2022-05-24 14:03:56,907 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-MDQGRCS with PID 11392 (D:\javaWorkSpace\tktest\target\classes started by chen in D:\javaWorkSpace\tktest)
-2022-05-24 14:03:56,949 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2022-05-24 14:04:03,493 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-24 14:04:04,217 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-24 14:04:04,218 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2022-05-24 14:04:07,161 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
-2022-05-24 14:04:07,216 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
-2022-05-24 14:04:07,216 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
-2022-05-24 14:04:07,216 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-05-24 14:04:07,818 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
-2022-05-24 14:04:07,819 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 10562 ms
-2022-05-24 14:04:15,958 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-24 14:04:16,330 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2022-05-24 14:04:16,331 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2022-05-24 14:04:16,331 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2022-05-24 14:04:16,331 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
-2022-05-24 14:04:17,285 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
-2022-05-24 14:04:17,354 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
-2022-05-24 14:04:17,390 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 28.794 seconds (JVM running for 36.471)
-2022-05-24 14:06:49,240 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-24 14:06:49,240 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2022-05-24 14:06:49,245 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
-2022-05-24 14:06:51,313 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-24 14:06:51,315 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-24 14:07:12,429 ERROR (HikariPool.java:595)- HikariPool-1 - Exception during pool initialization.
-java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
-	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
-	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
-	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
-	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:169)
-	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:178)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:121)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
-	at com.sun.proxy.$Proxy93.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy81.selectByExample(Unknown Source)
-	at com.myxx.tktest.service.ProjectInfoService.getProjectList(ProjectInfoService.java:91)
-	at com.myxx.tktest.controller.ProjectController.getProjectList(ProjectController.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
-	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
-	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
-	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
-	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
-	... 94 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
-	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
-	... 99 common frames omitted
-2022-05-24 14:07:12,432 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-24 14:07:12,432 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-24 14:07:33,436 ERROR (HikariPool.java:595)- HikariPool-1 - Exception during pool initialization.
-java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
-	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
-	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
-	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
-	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:169)
-	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:178)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:121)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
-	at com.sun.proxy.$Proxy93.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy81.selectByExample(Unknown Source)
-	at com.myxx.tktest.service.ProjectInfoService.getProjectList(ProjectInfoService.java:91)
-	at com.myxx.tktest.controller.ProjectController.getProjectList(ProjectController.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
-	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
-	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
-	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
-	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
-	... 94 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
-	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
-	... 99 common frames omitted
-2022-05-24 14:07:33,438 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-24 14:07:33,438 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-24 14:07:54,453 ERROR (HikariPool.java:595)- HikariPool-1 - Exception during pool initialization.
-java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
-	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
-	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
-	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
-	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:169)
-	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:178)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:121)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
-	at com.sun.proxy.$Proxy93.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy81.selectByExample(Unknown Source)
-	at com.myxx.tktest.service.ProjectInfoService.getProjectList(ProjectInfoService.java:91)
-	at com.myxx.tktest.controller.ProjectController.getProjectList(ProjectController.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
-	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
-	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
-	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
-	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
-	... 94 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
-	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
-	... 99 common frames omitted
-2022-05-24 14:12:22,341 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-24 14:12:22,342 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-24 14:12:22,774 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2022-05-24 14:12:22,861 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
-2022-05-24 15:22:47,881 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-24 15:22:47,885 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
-2022-05-24 15:22:47,893 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
-2022-05-25 14:01:20,128 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 10728 (C:\MyTech\tkmapper_generate\target\classes started by ejchen in C:\MyTech\tkmapper_generate)
-2022-05-25 14:01:20,130 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2022-05-25 14:01:20,724 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:01:20,838 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:01:20,839 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2022-05-25 14:01:21,235 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
-2022-05-25 14:01:21,243 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:01:21,244 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
-2022-05-25 14:01:21,244 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-05-25 14:01:21,317 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
-2022-05-25 14:01:21,317 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 1075 ms
-2022-05-25 14:01:22,113 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:01:22,203 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2022-05-25 14:01:22,203 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2022-05-25 14:01:22,204 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2022-05-25 14:01:22,204 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
-2022-05-25 14:01:22,325 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:01:22,345 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
-2022-05-25 14:01:22,348 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.608 seconds (JVM running for 4.176)
-2022-05-25 14:01:46,373 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:01:49,295 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 6684 (C:\MyTech\tkmapper_generate\target\classes started by ejchen in C:\MyTech\tkmapper_generate)
-2022-05-25 14:01:49,297 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2022-05-25 14:01:49,730 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:01:49,812 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:01:49,812 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2022-05-25 14:01:50,103 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
-2022-05-25 14:01:50,110 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:01:50,110 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
-2022-05-25 14:01:50,110 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-05-25 14:01:50,173 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
-2022-05-25 14:01:50,174 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 835 ms
-2022-05-25 14:01:50,901 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:01:50,988 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2022-05-25 14:01:50,989 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2022-05-25 14:01:50,989 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2022-05-25 14:01:50,990 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
-2022-05-25 14:01:51,101 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:01:51,120 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
-2022-05-25 14:01:51,123 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.297 seconds (JVM running for 3.075)
-2022-05-25 14:02:16,455 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-25 14:02:16,455 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2022-05-25 14:02:16,460 INFO (FrameworkServlet.java:547)- Completed initialization in 5 ms
-2022-05-25 14:02:47,976 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-25 14:02:47,977 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-25 14:03:09,025 ERROR (HikariPool.java:595)- HikariPool-1 - Exception during pool initialization.
-java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
-	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
-	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
-	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
-	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:169)
-	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:178)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:121)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
-	at com.sun.proxy.$Proxy93.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy81.selectByExample(Unknown Source)
-	at com.myxx.tktest.service.ProjectInfoService.getProjectList(ProjectInfoService.java:91)
-	at com.myxx.tktest.controller.ProjectController.getProjectList(ProjectController.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
-	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
-	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
-	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
-	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
-	... 94 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
-	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
-	... 99 common frames omitted
-2022-05-25 14:03:28,369 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:13:02,475 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 10884 (C:\MyTech\tkmapper_generate\target\classes started by ejchen in C:\MyTech\tkmapper_generate)
-2022-05-25 14:13:02,475 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2022-05-25 14:13:02,897 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:13:02,990 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:13:02,990 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2022-05-25 14:13:03,256 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
-2022-05-25 14:13:03,256 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:13:03,256 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
-2022-05-25 14:13:03,256 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-05-25 14:13:03,334 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
-2022-05-25 14:13:03,334 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 797 ms
-2022-05-25 14:13:04,100 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:13:04,178 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2022-05-25 14:13:04,178 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2022-05-25 14:13:04,178 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2022-05-25 14:13:04,178 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
-2022-05-25 14:13:04,287 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:13:04,303 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
-2022-05-25 14:13:04,303 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.191 seconds (JVM running for 4.092)
-2022-05-25 14:13:20,310 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-25 14:13:20,311 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2022-05-25 14:13:20,315 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
-2022-05-25 14:13:20,422 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-25 14:13:20,424 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-25 14:13:41,461 ERROR (HikariPool.java:595)- HikariPool-1 - Exception during pool initialization.
-java.sql.SQLRecoverableException: IO 错误: The Network Adapter could not establish the connection
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
-	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
-	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
-	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
-	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at com.github.pagehelper.util.ExecutorUtil.executeAutoCount(ExecutorUtil.java:169)
-	at com.github.pagehelper.PageInterceptor.count(PageInterceptor.java:178)
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:121)
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
-	at com.sun.proxy.$Proxy93.query(Unknown Source)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy81.selectByExample(Unknown Source)
-	at com.myxx.tktest.service.ProjectInfoService.getProjectList(ProjectInfoService.java:91)
-	at com.myxx.tktest.controller.ProjectController.getProjectList(ProjectController.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
-	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
-	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
-	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
-	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
-	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
-	... 94 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
-	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
-	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
-	... 99 common frames omitted
-2022-05-25 14:14:43,096 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:14:45,552 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 3780 (C:\MyTech\tkmapper_generate\target\classes started by ejchen in C:\MyTech\tkmapper_generate)
-2022-05-25 14:14:45,552 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2022-05-25 14:14:45,912 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:14:45,990 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:14:45,990 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2022-05-25 14:14:46,227 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
-2022-05-25 14:14:46,243 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:14:46,243 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
-2022-05-25 14:14:46,243 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-05-25 14:14:46,290 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
-2022-05-25 14:14:46,290 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 676 ms
-2022-05-25 14:14:46,962 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:14:47,041 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2022-05-25 14:14:47,041 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2022-05-25 14:14:47,041 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2022-05-25 14:14:47,041 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
-2022-05-25 14:14:47,134 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:14:47,150 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
-2022-05-25 14:14:47,150 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 1.902 seconds (JVM running for 2.4)
-2022-05-25 14:14:51,001 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-25 14:14:51,001 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2022-05-25 14:14:51,005 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
-2022-05-25 14:14:51,098 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-25 14:14:51,099 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-25 14:14:51,159 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2022-05-25 14:14:51,162 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
-2022-05-25 14:17:50,038 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:17:50,038 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
-2022-05-25 14:17:50,054 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
-2022-05-25 14:23:54,298 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 3108 (C:\MyTech\tkmapper_generate\target\classes started by ejchen in C:\MyTech\tkmapper_generate)
-2022-05-25 14:23:54,298 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2022-05-25 14:23:54,707 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:23:54,800 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
-2022-05-25 14:23:54,800 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2022-05-25 14:23:55,098 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
-2022-05-25 14:23:55,114 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:23:55,114 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
-2022-05-25 14:23:55,114 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
-2022-05-25 14:23:55,176 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
-2022-05-25 14:23:55,176 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 846 ms
-2022-05-25 14:23:55,913 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-25 14:23:56,007 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2022-05-25 14:23:56,007 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2022-05-25 14:23:56,007 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2022-05-25 14:23:56,007 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
-2022-05-25 14:23:56,116 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
-2022-05-25 14:23:56,132 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
-2022-05-25 14:23:56,148 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.213 seconds (JVM running for 4.451)
-2022-05-25 14:24:40,911 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-25 14:24:40,912 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
-2022-05-25 14:24:40,916 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
-2022-05-25 14:24:41,065 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
-2022-05-25 14:24:41,067 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-2022-05-25 14:24:41,133 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
-2022-05-25 14:24:41,136 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-05-27 16:15:09,059 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 14936 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-05-27 16:15:09,062 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-05-27 16:15:09,540 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-05-27 16:15:09,632 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-05-27 16:15:09,632 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-05-27 16:15:09,929 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-05-27 16:15:09,936 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-27 16:15:09,937 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-05-27 16:15:09,937 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-05-27 16:15:10,015 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-05-27 16:15:10,015 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 890 ms
+2022-05-27 16:15:10,792 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-27 16:15:10,879 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-05-27 16:15:10,880 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-05-27 16:15:10,880 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-05-27 16:15:10,880 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-05-27 16:15:10,990 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-05-27 16:15:11,005 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 16:15:11,007 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.307 seconds (JVM running for 2.854)
+2022-05-27 16:17:41,492 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-27 16:17:41,493 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-05-27 16:17:41,499 INFO (FrameworkServlet.java:547)- Completed initialization in 6 ms
+2022-05-27 16:17:41,624 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-05-27 16:17:41,625 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-05-27 16:17:41,691 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-05-27 16:17:41,696 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-05-27 19:38:20,555 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-27 19:38:20,559 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2022-05-27 19:38:20,572 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2022-05-27 20:11:12,888 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 7972 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-05-27 20:11:12,890 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-05-27 20:11:13,274 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-05-27 20:11:13,343 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-05-27 20:11:13,344 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-05-27 20:11:13,598 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-05-27 20:11:13,604 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-27 20:11:13,605 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-05-27 20:11:13,605 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-05-27 20:11:13,673 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-05-27 20:11:13,673 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 728 ms
+2022-05-27 20:11:14,370 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-27 20:11:14,447 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-05-27 20:11:14,448 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-05-27 20:11:14,448 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-05-27 20:11:14,448 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-05-27 20:11:14,543 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-05-27 20:11:14,557 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 20:11:14,559 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 1.975 seconds (JVM running for 2.486)
+2022-05-27 20:11:22,660 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-27 20:11:22,660 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-05-27 20:11:22,664 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-05-27 20:11:22,783 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-05-27 20:11:22,785 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-05-27 20:11:22,845 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-05-27 20:11:22,848 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-05-27 20:59:18,208 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-27 20:59:18,212 INFO (HikariDataSource.java:350)- HikariPool-1 - Shutdown initiated...
+2022-05-27 20:59:18,225 INFO (HikariDataSource.java:352)- HikariPool-1 - Shutdown completed.
+2022-05-27 20:59:22,709 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 4240 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-05-27 20:59:22,712 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-05-27 20:59:23,101 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-05-27 20:59:23,175 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-05-27 20:59:23,176 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-05-27 20:59:23,423 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-05-27 20:59:23,428 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-05-27 20:59:23,429 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-05-27 20:59:23,429 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-05-27 20:59:23,495 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-05-27 20:59:23,495 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 755 ms
+2022-05-27 20:59:24,186 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-27 20:59:24,260 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-05-27 20:59:24,261 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-05-27 20:59:24,261 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-05-27 20:59:24,262 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-05-27 20:59:24,355 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-05-27 20:59:24,369 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 20:59:24,371 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 1.984 seconds (JVM running for 2.502)
+2022-05-27 20:59:35,546 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-27 20:59:35,547 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-05-27 20:59:35,550 INFO (FrameworkServlet.java:547)- Completed initialization in 3 ms
+2022-05-27 20:59:35,641 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-05-27 20:59:35,642 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-05-27 20:59:35,702 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-05-27 20:59:35,706 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.

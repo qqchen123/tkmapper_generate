@@ -52,7 +52,7 @@
         -->
         <table tableName="TDMS_PROCEDURE_CATE" domainObjectName="ProcedureCate">
             <!--配置 ORACLE 主键生成策略-->
-            <generatedKey column="CATE_ID"
+            <generatedKey column="ID"
                           sqlStatement="select SEQ_{1}.nextval from dual"
                           identity="false" type="pre"/>
             <!--配置MYSQL主键生成策略-->
