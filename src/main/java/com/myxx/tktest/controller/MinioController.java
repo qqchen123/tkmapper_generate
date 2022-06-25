@@ -4,6 +4,7 @@ import com.myxx.tktest.config.MinIOConfig;
 import com.myxx.tktest.service.MinIOService;
 import com.myxx.tktest.utils.result.Result;
 import com.myxx.tktest.utils.result.ResultResponse;
+import io.minio.messages.Item;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import static com.myxx.tktest.utils.result.ResultCode.NOT_FOUND;
@@ -78,7 +81,7 @@ public class MinioController {
     }
 
     @GetMapping("/getUrl")
-    public Result getUrl(){
+    public Result getUrl() {
 //        String url = minIOService.getPresignedPutObject("jsbucket", "1.jpeg", 1000);
         String url = minIOService.getObjectUrl("tdms", "view.png");
         System.out.println(url);
@@ -87,20 +90,33 @@ public class MinioController {
 
 
     @GetMapping("downloadObj")
-    public Result downloadObj(HttpServletResponse response){
+    public Result downloadObj(HttpServletResponse response) {
 //        minIOService.getObject("jsbucket", "1.jpeg","a.jpeg");
 //        return ResultResponse.success();
 
-        boolean status = minIOService.downloadFile("jsbucket", "2022-04-18/5def3084-16b8-4de6-9868-d3b2335fc637.jpeg", "a.png",  response);
+        boolean status = minIOService.downloadFile("jsbucket", "2022-04-18/5def3084-16b8-4de6-9868-d3b2335fc637.jpeg", "a.png", response);
         return status ? ResultResponse.success("下载成功") : ResultResponse.success("下载失败");
     }
 
 
-   @GetMapping("/bucketExists")
-    public Result bucketExists(String bucketName){
-       boolean b = minIOService.bucketExists(bucketName);
-       return ResultResponse.success(b);
+    @GetMapping("/bucketExists")
+    public Result bucketExists(String bucketName) {
+        boolean b = minIOService.bucketExists(bucketName);
+        return ResultResponse.success(b);
     }
+
+    @GetMapping("/getBucketList")
+    public Result getBucketList(String bucketName) throws Exception{
+        Iterable<io.minio.Result<Item>> results = minIOService.listObjects(bucketName);
+
+        List<String> objList= new ArrayList<>();
+        for (io.minio.Result<Item> result : results) {
+            Item item = result.get();
+            objList.add(item.objectName());
+        }
+        return ResultResponse.success(objList);
+    }
+
 
 
 }

@@ -1,6 +1,8 @@
 package com.myxx.tktest.service;
 
 import com.myxx.tktest.utils.MinioUtils;
+import io.minio.Result;
+import io.minio.messages.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -97,5 +99,9 @@ public class MinIOService {
 
     public boolean getObject(String bucketName, String objectNa, String fileName ){
         return minIOUtils.getObject(bucketName, objectNa, fileName);
+    }
+
+    public Iterable<Result<Item>> listObjects(String bucketName){
+        return minIOUtils.listObjects(bucketName);
     }
 }

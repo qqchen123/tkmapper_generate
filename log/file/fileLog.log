@@ -319,3 +319,288 @@
 2022-06-25 19:54:07,218 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-25 19:54:07,218 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
 2022-06-25 19:54:07,222 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 20:05:44,878 INFO (MinioController.java:51)- 文件格式为:image/png
+2022-06-25 20:05:44,879 INFO (MinioController.java:52)- 文件原名称为:微信截图_20220530163205.png
+2022-06-25 20:05:44,879 INFO (MinioController.java:53)- 文件存储的桶为:tdms
+2022-06-25 20:05:44,879 INFO (MinioController.java:54)- 文件对象路径为:2022-06-25/92c3ded0-ccd9-4324-a7a9-c3f8ca0b3bb7.png
+2022-06-25 20:45:04,520 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:45:09,972 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 14104 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 20:45:09,975 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 20:45:10,541 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:45:10,647 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:45:10,647 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 20:45:10,971 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 20:45:10,978 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:45:10,979 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 20:45:10,979 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 20:45:11,054 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 20:45:11,055 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 949 ms
+2022-06-25 20:45:11,866 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:45:11,961 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 20:45:11,962 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 20:45:11,962 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 20:45:11,962 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 20:45:12,086 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:45:12,103 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 20:45:12,106 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.581 seconds (JVM running for 3.274)
+2022-06-25 20:45:28,278 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 20:45:28,279 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 20:45:28,284 INFO (FrameworkServlet.java:547)- Completed initialization in 5 ms
+2022-06-25 20:48:51,198 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:48:56,414 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 1060 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 20:48:56,430 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 20:48:56,994 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:48:57,088 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:48:57,088 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 20:48:57,401 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 20:48:57,401 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:48:57,401 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 20:48:57,401 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 20:48:57,479 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 20:48:57,479 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 908 ms
+2022-06-25 20:48:58,260 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:48:58,369 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 20:48:58,369 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 20:48:58,369 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 20:48:58,369 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 20:48:58,479 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:48:58,494 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 20:48:58,494 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.513 seconds (JVM running for 3.15)
+2022-06-25 20:49:08,409 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 20:49:08,409 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 20:49:08,413 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 20:49:54,012 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:49:58,739 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 13456 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 20:49:58,833 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 20:49:59,318 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:49:59,428 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:49:59,428 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 20:49:59,724 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 20:49:59,740 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:49:59,740 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 20:49:59,740 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 20:49:59,803 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 20:49:59,803 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 876 ms
+2022-06-25 20:50:00,600 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:50:00,694 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 20:50:00,694 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 20:50:00,694 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 20:50:00,694 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 20:50:00,819 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:50:00,835 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 20:50:00,835 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.515 seconds (JVM running for 3.137)
+2022-06-25 20:50:07,020 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 20:50:07,021 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 20:50:07,025 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 20:51:38,155 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:51:43,043 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 3768 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 20:51:43,043 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 20:51:43,580 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:51:43,669 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:51:43,669 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 20:51:43,978 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 20:51:43,978 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:51:43,978 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 20:51:43,978 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 20:51:44,056 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 20:51:44,056 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 924 ms
+2022-06-25 20:51:44,880 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:51:44,974 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 20:51:44,974 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 20:51:44,974 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 20:51:44,974 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 20:51:45,099 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:51:45,115 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 20:51:45,115 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.609 seconds (JVM running for 3.249)
+2022-06-25 20:51:48,419 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 20:51:48,420 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 20:51:48,424 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 20:57:09,171 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:57:14,430 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 7296 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 20:57:14,446 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 20:57:15,008 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:57:15,086 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 20:57:15,086 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 20:57:15,400 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 20:57:15,400 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:57:15,400 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 20:57:15,400 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 20:57:15,478 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 20:57:15,478 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 884 ms
+2022-06-25 20:57:16,283 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 20:57:16,377 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 20:57:16,377 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 20:57:16,377 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 20:57:16,377 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 20:57:16,486 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 20:57:16,502 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 20:57:16,502 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.491 seconds (JVM running for 3.091)
+2022-06-25 20:57:28,507 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 20:57:28,508 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 20:57:28,512 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 21:00:21,503 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 21:00:26,161 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 1204 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 21:00:26,161 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 21:00:26,594 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 21:00:26,683 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 21:00:26,684 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 21:00:26,987 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 21:00:26,994 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 21:00:26,994 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 21:00:26,994 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 21:00:27,069 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 21:00:27,069 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 873 ms
+2022-06-25 21:00:27,859 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 21:00:27,953 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 21:00:27,953 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 21:00:27,953 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 21:00:27,953 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 21:00:28,078 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 21:00:28,097 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 21:00:28,097 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.506 seconds (JVM running for 3.103)
+2022-06-25 21:00:32,640 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 21:00:32,641 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 21:00:32,645 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 21:01:56,890 INFO (ExecutorConfigurationSupport.java:208)- Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-25 21:02:01,810 INFO (StartupInfoLogger.java:55)- Starting TktestApplication on DESKTOP-8OUSO50 with PID 16244 (D:\MyWorkSpace\MyTech\tkmapper_generate\target\classes started by ejchen in D:\MyWorkSpace\MyTech\tkmapper_generate)
+2022-06-25 21:02:01,826 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2022-06-25 21:02:02,357 WARN (ClassPathMapperScanner.java:146)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 21:02:02,451 WARN (Logger.java:44)- No MyBatis mapper was found in '[com.myxx.tktest]' package. Please check your configuration.
+2022-06-25 21:02:02,451 INFO (ConfigurationClassPostProcessor.java:409)- Cannot enhance @Configuration bean definition 'idConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022-06-25 21:02:02,780 INFO (TomcatWebServer.java:92)- Tomcat initialized with port(s): 8080 (http)
+2022-06-25 21:02:02,780 INFO (DirectJDKLog.java:173)- Initializing ProtocolHandler ["http-nio-8080"]
+2022-06-25 21:02:02,780 INFO (DirectJDKLog.java:173)- Starting service [Tomcat]
+2022-06-25 21:02:02,780 INFO (DirectJDKLog.java:173)- Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-06-25 21:02:02,858 INFO (DirectJDKLog.java:173)- Initializing Spring embedded WebApplicationContext
+2022-06-25 21:02:02,858 INFO (ServletWebServerApplicationContext.java:284)- Root WebApplicationContext: initialization completed in 892 ms
+2022-06-25 21:02:03,656 INFO (ExecutorConfigurationSupport.java:171)- Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-25 21:02:03,749 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2022-06-25 21:02:03,749 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2022-06-25 21:02:03,749 INFO (MapperCacheDisabler.java:60)- Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2022-06-25 21:02:03,749 INFO (MapperCacheDisabler.java:83)- Clear EntityHelper entityTableMap cache.
+2022-06-25 21:02:03,859 INFO (DirectJDKLog.java:173)- Starting ProtocolHandler ["http-nio-8080"]
+2022-06-25 21:02:03,874 INFO (TomcatWebServer.java:204)- Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-06-25 21:02:03,874 INFO (StartupInfoLogger.java:61)- Started TktestApplication in 2.489 seconds (JVM running for 3.193)
+2022-06-25 21:02:07,780 INFO (DirectJDKLog.java:173)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-25 21:02:07,781 INFO (FrameworkServlet.java:525)- Initializing Servlet 'dispatcherServlet'
+2022-06-25 21:02:07,785 INFO (FrameworkServlet.java:547)- Completed initialization in 4 ms
+2022-06-25 21:07:03,352 INFO (HikariDataSource.java:110)- HikariPool-1 - Starting...
+2022-06-25 21:07:03,354 WARN (DriverDataSource.java:70)- Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-06-25 21:07:03,426 INFO (PoolBase.java:527)- HikariPool-1 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2022-06-25 21:07:03,430 INFO (HikariDataSource.java:123)- HikariPool-1 - Start completed.
+2022-06-25 21:12:43,598 INFO (MinioController.java:54)- 文件格式为:image/png
+2022-06-25 21:12:43,599 INFO (MinioController.java:55)- 文件原名称为:微信截图_20220530163205.png
+2022-06-25 21:12:43,599 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:12:43,599 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/ac8674b8-2041-4dee-9e6e-14a5f874822c.png
+2022-06-25 21:13:57,274 INFO (MinioController.java:54)- 文件格式为:image/png
+2022-06-25 21:13:57,275 INFO (MinioController.java:55)- 文件原名称为:view.png
+2022-06-25 21:13:57,275 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:13:57,275 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/5d777e87-38ee-43a2-b8ff-7711704484ee.png
+2022-06-25 21:14:03,656 INFO (MinioController.java:54)- 文件格式为:image/png
+2022-06-25 21:14:03,656 INFO (MinioController.java:55)- 文件原名称为:微信截图_20220525192615.png
+2022-06-25 21:14:03,656 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:14:03,656 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/43ebba2f-1978-456d-8c6e-63c437f2a1ba.png
+2022-06-25 21:15:02,905 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 21:15:02,905 INFO (MinioController.java:55)- 文件原名称为:oracle.txt
+2022-06-25 21:15:02,905 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:15:02,905 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/c9abc1c7-3a83-4fa0-9aae-d15d2da92feb.txt
+2022-06-25 21:15:08,886 INFO (MinioController.java:54)- 文件格式为:image/jpeg
+2022-06-25 21:15:08,886 INFO (MinioController.java:55)- 文件原名称为:五月居家证明.jpg
+2022-06-25 21:15:08,886 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:15:08,887 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/8ccced07-edc1-4aeb-9b09-8e58a4a94200.jpg
+2022-06-25 21:47:56,883 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 21:47:56,883 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 21:47:56,884 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:47:56,884 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/0897444b-2547-41ed-af70-0b46db323faa.docx
+2022-06-25 21:50:06,603 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 21:50:06,603 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 21:50:06,603 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:50:06,604 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/3e7868df-a9cb-4152-a214-fffc2a679a78.docx
+2022-06-25 21:54:00,367 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+2022-06-25 21:54:00,367 INFO (MinioController.java:55)- 文件原名称为:4月工作内容_陈恩杰.xlsx
+2022-06-25 21:54:00,367 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:54:00,367 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/a8d9533f-deb0-473b-81be-d89da2f4a7d1.xlsx
+2022-06-25 21:56:19,227 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 21:56:19,227 INFO (MinioController.java:55)- 文件原名称为:ng-alain.txt
+2022-06-25 21:56:19,227 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:56:19,227 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/85dcc925-5ed6-486d-911a-4691c9e2fe5c.txt
+2022-06-25 21:58:37,867 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 21:58:37,867 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 21:58:37,867 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:58:37,868 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/94bfc0be-1384-4adb-b1a7-396271ccac32.docx
+2022-06-25 21:59:13,045 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 21:59:13,045 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 21:59:13,046 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 21:59:13,046 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/7b63c5cc-ccb8-43d2-9aac-91be71087487.docx
+2022-06-25 22:00:06,254 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:00:06,255 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:00:06,255 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:00:06,255 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/eb214eb8-20ce-46b0-8297-e0559bc773e5.docx
+2022-06-25 22:00:36,070 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:00:36,070 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:00:36,070 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:00:36,070 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/68d3be5d-0b60-45b3-826f-f52dd05a7899.docx
+2022-06-25 22:02:04,470 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:02:04,470 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:02:04,470 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:02:04,471 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/98c2ef40-0037-4a26-a8ea-b2e12644465c.docx
+2022-06-25 22:02:24,094 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+2022-06-25 22:02:24,094 INFO (MinioController.java:55)- 文件原名称为:5月工作内容_陈恩杰.xlsx
+2022-06-25 22:02:24,095 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:02:24,095 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/1821c9b6-d8d0-436d-aa61-458978e0f15d.xlsx
+2022-06-25 22:02:50,473 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+2022-06-25 22:02:50,473 INFO (MinioController.java:55)- 文件原名称为:4月工作内容_陈恩杰.xlsx
+2022-06-25 22:02:50,473 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:02:50,474 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/9e44e0b3-9fdd-4670-b86e-b7dc9cb4af12.xlsx
+2022-06-25 22:07:39,241 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:07:39,241 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:07:39,241 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:07:39,242 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/b3e5d421-4d85-4238-b90c-81999a7b3f27.docx
+2022-06-25 22:10:26,119 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:10:26,120 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:10:26,120 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:10:26,120 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/1824f5ec-e682-44fb-be2a-24513534908f.docx
+2022-06-25 22:11:09,497 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:11:09,497 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:11:09,497 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:11:09,497 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/11fa1ee7-687b-41e5-be2d-439a9ba291cc.docx
+2022-06-25 22:12:19,233 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:12:19,234 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:12:19,234 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:12:19,234 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/4b7e338f-73ac-4b95-bba3-5f484245e726.docx
+2022-06-25 22:13:17,408 INFO (MinioController.java:54)- 文件格式为:image/png
+2022-06-25 22:13:17,408 INFO (MinioController.java:55)- 文件原名称为:20180421093323821.png
+2022-06-25 22:13:17,408 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:13:17,408 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/595d99f8-05f0-4474-8048-5ff99f129a85.png
+2022-06-25 22:15:37,896 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+2022-06-25 22:15:37,896 INFO (MinioController.java:55)- 文件原名称为:5月工作内容_陈恩杰.xlsx
+2022-06-25 22:15:37,896 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:15:37,897 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/e724f2af-f817-4051-b9c2-49baedf92d73.xlsx
+2022-06-25 22:15:59,240 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:15:59,240 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:15:59,240 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:15:59,240 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/91421cf4-b240-4604-b843-031915d3f57b.docx
+2022-06-25 22:16:29,608 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 22:16:29,608 INFO (MinioController.java:55)- 文件原名称为:MINO.txt
+2022-06-25 22:16:29,608 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:16:29,609 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/35e75312-3fcf-4392-8995-300d20e1a9aa.txt
+2022-06-25 22:16:59,794 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 22:16:59,794 INFO (MinioController.java:55)- 文件原名称为:ng-alain.txt
+2022-06-25 22:16:59,794 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:16:59,794 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/e6317e16-c0f5-424e-aaf6-cd2dd3da1eec.txt
+2022-06-25 22:17:28,932 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 22:17:28,932 INFO (MinioController.java:55)- 文件原名称为:MINO.txt
+2022-06-25 22:17:28,932 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:17:28,932 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/36951bc9-0543-4355-9215-9d5fa07d3847.txt
+2022-06-25 22:17:56,195 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 22:17:56,196 INFO (MinioController.java:55)- 文件原名称为:MINO.txt
+2022-06-25 22:17:56,196 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:17:56,196 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/70947e4b-383a-48b7-be49-7d1f38c8e154.txt
+2022-06-25 22:18:10,119 INFO (MinioController.java:54)- 文件格式为:text/plain
+2022-06-25 22:18:10,119 INFO (MinioController.java:55)- 文件原名称为:MINO.txt
+2022-06-25 22:18:10,120 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:18:10,120 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/69c54b79-ba7e-4a59-8d73-7aa792c8ee96.txt
+2022-06-25 22:19:47,907 INFO (MinioController.java:54)- 文件格式为:application/vnd.openxmlformats-officedocument.wordprocessingml.document
+2022-06-25 22:19:47,907 INFO (MinioController.java:55)- 文件原名称为:2022-4-21陈恩杰疫情在家工作汇总 - 副本.docx
+2022-06-25 22:19:47,907 INFO (MinioController.java:56)- 文件存储的桶为:tdms
+2022-06-25 22:19:47,907 INFO (MinioController.java:57)- 文件对象路径为:2022-06-25/53127a8e-fbff-4374-8744-6d85d651ffb5.docx
