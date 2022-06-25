@@ -23,7 +23,7 @@ public class PredefinedData {
     private String predefinedData;
 
     @Column(name = "CATE_ID")
-    private BigDecimal cateId;
+    private Short cateId;
 
     @Column(name = "UPDATE_TIME")
     private Date updateTime;
@@ -33,4 +33,7 @@ public class PredefinedData {
 
     @Column(name = "IS_DELETE")
     private String isDelete;
+
+    @Column(name = "TABLE_COLUMN")
+    private String tableColumn;
 }

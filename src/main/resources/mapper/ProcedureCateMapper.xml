@@ -12,7 +12,6 @@
     <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
     <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
     <result column="TABLE_INFO" jdbcType="VARCHAR" property="tableInfo" />
-    <result column="TABLE_COLUMN" jdbcType="VARCHAR" property="tableColumn" />
   </resultMap>
 
 

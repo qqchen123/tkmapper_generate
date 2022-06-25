@@ -7,9 +7,6 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
-import javax.persistence.*;
-import java.util.Date;
-
 @Getter
 @Setter
 @ToString
@@ -38,7 +35,4 @@ public class ProcedureCate {
 
     @Column(name = "TABLE_INFO")
     private String tableInfo;
-
-    @Column(name = "TABLE_COLUMN")
-    private String tableColumn;
 }

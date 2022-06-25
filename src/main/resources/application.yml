@@ -36,7 +36,7 @@ server:
     context-path: /api
 
 minio:
-  endpoint: http://192.168.58.131:9000
+  endpoint: http://192.168.146.5:9000
   accessKey: minioadmin
   secretKey: minioadmin
-  bucketName: jsbucket
+  bucketName: tdms

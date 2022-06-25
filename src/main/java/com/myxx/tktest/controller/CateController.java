@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.myxx.tktest.dto.ProcedureCateDto;
 import com.myxx.tktest.pojo.ProcedureCate;
 import com.myxx.tktest.service.CateService;
+import com.myxx.tktest.service.CommonService;
 import com.myxx.tktest.utils.result.Result;
 import com.myxx.tktest.utils.result.ResultResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class CateController {
 
     @Autowired
     private CateService cateService;
+
+    @Autowired
+    private CommonService commonService;
 
     /**
      * 通过分页获取分类数据
@@ -90,6 +94,24 @@ public class CateController {
     public Result deleteCate(@PathVariable("id") Integer id){
         cateService.deleteCate(id);
         return ResultResponse.success();
+    }
+
+    /**
+     * 获取数据表的所有字段
+     * @param tableName
+     * @return
+     */
+    @GetMapping("/getFields/{tableName}")
+    public Result getFields(@PathVariable("tableName") String tableName){
+        List<String> fields = cateService.getFields(tableName);
+        return  ResultResponse.success(fields);
+    }
+
+
+    @GetMapping("/test")
+    public Result test(){
+        commonService.dealCateAndPreDefinedData();
+        return  ResultResponse.success();
     }
 
 }

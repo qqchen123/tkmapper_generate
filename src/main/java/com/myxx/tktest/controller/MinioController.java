@@ -80,7 +80,8 @@ public class MinioController {
     @GetMapping("/getUrl")
     public Result getUrl(){
 //        String url = minIOService.getPresignedPutObject("jsbucket", "1.jpeg", 1000);
-        String url = minIOService.getObjectUrl("jsbucket", "1.jpeg");
+        String url = minIOService.getObjectUrl("tdms", "view.png");
+        System.out.println(url);
         return ResultResponse.success(url);
     }
 
@@ -93,5 +94,13 @@ public class MinioController {
         boolean status = minIOService.downloadFile("jsbucket", "2022-04-18/5def3084-16b8-4de6-9868-d3b2335fc637.jpeg", "a.png",  response);
         return status ? ResultResponse.success("下载成功") : ResultResponse.success("下载失败");
     }
+
+
+   @GetMapping("/bucketExists")
+    public Result bucketExists(String bucketName){
+       boolean b = minIOService.bucketExists(bucketName);
+       return ResultResponse.success(b);
+    }
+
 
 }

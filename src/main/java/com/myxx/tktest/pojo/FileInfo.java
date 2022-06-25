@@ -30,7 +30,7 @@ public class FileInfo {
     private Long projectId;
 
     @Column(name = "CATE_ID")
-    private Long cateId;
+    private Short cateId;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "UPDATE_TIME")

@@ -3,7 +3,9 @@ package com.myxx.tktest.service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.myxx.tktest.dto.ProcedureCateDto;
+import com.myxx.tktest.mapper.PredefinedDataMapper;
 import com.myxx.tktest.mapper.ProcedureCateMapper;
+import com.myxx.tktest.pojo.PredefinedData;
 import com.myxx.tktest.pojo.ProcedureCate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,9 @@ public class CateService {
 
     @Autowired
     private ProcedureCateMapper procedureCateMapper;
+
+    @Autowired
+    private PredefinedDataMapper predefinedDataMapper;
 
     /**
      * 根据id获取分类信息
@@ -47,6 +52,11 @@ public class CateService {
         return new PageInfo<>(cate);
     }
 
+    /**
+     * 根据父id查询数据
+     * @param parentId
+     * @return
+     */
     public List<ProcedureCate> getCatesList(Integer parentId) {
         Example example = new Example(ProcedureCate.class);
         Example.Criteria criteria = example.createCriteria();
@@ -54,6 +64,13 @@ public class CateService {
         return procedureCateMapper.selectByExample(example);
     }
 
+
+    /*public List<ProcedureCate> getParentCatesList(Integer parentId) {
+        Example example = new Example(ProcedureCate.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("parentId", parentId);
+        return procedureCateMapper.selectByExample(example);
+    }*/
 
     /**
      * 添加分类数据
@@ -87,5 +104,17 @@ public class CateService {
     public Integer deleteCate(Integer cateId){
         return procedureCateMapper.deleteByPrimaryKey(cateId);
     }
+
+
+    /**
+     * 获取数据表的所有字段
+     * @param tableName
+     * @return
+     */
+    public List<String> getFields(String tableName){
+        return procedureCateMapper.getField(tableName);
+    }
+
+
 
 }
